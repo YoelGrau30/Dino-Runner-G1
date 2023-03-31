@@ -4,22 +4,30 @@ from pygame.sprite import Sprite
 
 class Mario(Sprite):
     X_POS = 10
-    Y_POS = 30
+    Y_POS = 62
 
     def __init__(self):
         self.image = RUNNING[0]
         self.mario_rect = self.image.get_rect()
         self.mario_rect.x = self.X_POS
         self.mario_rect.y = self.Y_POS
+        self.step = 0
 
     def update(self):
-        pass
+        self.run()
+        self.step += 1
 
     def draw(self, screen):
         screen.blit(self.image, (self.mario_rect.x, self.mario_rect.y))
 
     def run(self):
-        pass
+        if self.step % 2 == 0:
+            self.image = RUNNING[0]
+        else:
+            self.image = RUNNING[1]
+        self.mario_rect = self.image.get_rect()
+        self.mario_rect.x = self.X_POS
+        self.mario_rect.y = self.Y_POS
 
     def car(self):
         pass
