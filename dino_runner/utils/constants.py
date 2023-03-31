@@ -12,8 +12,10 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 ICON = pygame.image.load(os.path.join(IMG_DIR, "LogoMario.png"))
 
 RUNNING = [
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    #pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
+    #pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/MarioRun1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/MarioRun2.png")),
 ]
 
 RUNNING_SHIELD = [
