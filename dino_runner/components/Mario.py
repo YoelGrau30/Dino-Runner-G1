@@ -3,8 +3,10 @@ from dino_runner.utils.constants import RUNNING
 from pygame.sprite import Sprite
 
 class Mario(Sprite):
-    X_POS = 10
-    Y_POS = 62
+    #X_POS = 10
+    #Y_POS = 62
+    X_POS = 32
+    Y_POS = 356
 
     def __init__(self):
         self.image = RUNNING[0]
@@ -15,7 +17,7 @@ class Mario(Sprite):
 
     def update(self):
         self.run()
-
+        
         self.step += 1
         if self.step == 10:
             self.step = 0
