@@ -8,19 +8,16 @@ SCREEN_WIDTH = 1100
 FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 
+BG = pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Base.png'))
+
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "LogoMario.png"))
 
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
 
-BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Base.png'))
-
-#-------------------------------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------------------------------
-
-run1 = os.path.join(IMG_DIR, "Dino/MarioRun1.png")
-run2 = os.path.join(IMG_DIR, "Dino/MarioRun2.png")
+run1 = os.path.join(IMG_DIR, "Mario/MarioRun1.png")
+run2 = os.path.join(IMG_DIR, "Mario/MarioRun2.png")
 ancho = 87
 alto = 98
 
@@ -35,7 +32,7 @@ RUNNING = [run_redimensionada1, run_redimensionada2]
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
 
-jump1 = os.path.join(IMG_DIR, "Dino/MarioRun1.png")
+jump1 = os.path.join(IMG_DIR, "Mario/MarioRun1.png")
 ancho = 87
 alto = 98
 jump_original1 = pygame.image.load(jump1)
@@ -45,8 +42,8 @@ JUMPING = imagen_jump
 
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
-car1 = os.path.join(IMG_DIR, "Dino/MarioCar1.png")
-car2 = os.path.join(IMG_DIR, "Dino/MarioCar2.png")
+car1 = os.path.join(IMG_DIR, "Mario/MarioCar1.png")
+car2 = os.path.join(IMG_DIR, "Mario/MarioCar2.png")
 ancho = 116
 alto = 60
 car_original1 = pygame.image.load(car1)
