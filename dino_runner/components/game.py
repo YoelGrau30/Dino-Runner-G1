@@ -1,5 +1,6 @@
 import pygame
-from dino_runner.components.mario import Mario
+#from dino_runner.components.mario import Mario
+from dino_runner.components.super_mario import SuperMario
 
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
@@ -15,7 +16,8 @@ class Game:
         self.game_speed = 16
         self.x_pos_bg = 0
         self.y_pos_bg = 442
-        self.player = Mario()
+        #self.player = Mario()
+        self.player = SuperMario()
 
     def run(self):
         # Game loop: events - update - draw

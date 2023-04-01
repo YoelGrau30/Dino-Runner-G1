@@ -3,8 +3,6 @@ from dino_runner.utils.constants import DUCKING, JUMPING, RUNNING
 from pygame.sprite import Sprite
 
 class Mario(Sprite):
-    #X_POS = 10
-    #Y_POS = 62
     X_POS = 32
     Y_POS = 356
     JUMP_VEL = 10
