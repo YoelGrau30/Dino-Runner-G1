@@ -30,7 +30,7 @@ class SuperMario(Sprite):
         elif self.action == MARIO_DUCKING:
             self.car()
     
-        if self.action != MARIO_JUMPING and self.action != MARIO_DUCKING: 
+        if self.action != MARIO_JUMPING: #and self.action != MARIO_DUCKING: 
             if user_input[pygame.K_UP]:
                 self.action = MARIO_JUMPING
             elif user_input[pygame.K_DOWN]:
@@ -63,7 +63,7 @@ class SuperMario(Sprite):
             self.jump_velocity = self.JUMP_VEL
 
     def car(self):
-        self.image = DUCKING
+        self.image = DUCKING[self.step // 5]
         self.rect.y = self.Y_POS + 36
         self.action = MARIO_DUCKING
 

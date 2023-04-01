@@ -1,6 +1,7 @@
 import pygame
 #from dino_runner.components.mario import Mario
 from dino_runner.components.super_mario import SuperMario
+from pygame import Surface
 
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
