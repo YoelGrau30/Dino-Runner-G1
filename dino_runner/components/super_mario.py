@@ -65,6 +65,7 @@ class SuperMario(Sprite):
     def car(self):
         self.image = DRIVING[self.step // 5]
         self.rect.y = self.Y_POS + 36
+        self.step += 1
         self.action = MARIO_DRIVING
 
     def draw(self, screen: Surface):
