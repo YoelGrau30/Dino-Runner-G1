@@ -24,18 +24,24 @@ class SuperMario(Sprite):
     
     def update(self, user_input):
         if self.action == MARIO_RUNNING:
-            self.run()
+            self.run()    
         elif self.action == MARIO_JUMPING:
             self.jump()
-        
-        if self.action != MARIO_JUMPING:
+        elif self.action == MARIO_DUCKING:
+            self.car()
+    
+        if self.action != MARIO_JUMPING and self.action != MARIO_DUCKING: 
             if user_input[pygame.K_UP]:
                 self.action = MARIO_JUMPING
+            elif user_input[pygame.K_DOWN]:
+                self.action = MARIO_DUCKING
             else:
                 self.action = MARIO_RUNNING
-        
+    
         if self.step >= 10:
             self.step = 0
+
+
 
     def run(self):
         #self.image = RUNNING[0] if self.step < 5 else RUNNING[1]
@@ -55,6 +61,11 @@ class SuperMario(Sprite):
             self.action = MARIO_RUNNING
             self.rect.y = self.Y_POS
             self.jump_velocity = self.JUMP_VEL
+
+    def car(self):
+        self.image = DUCKING
+        self.rect.y = self.Y_POS + 36
+        self.action = MARIO_DUCKING
 
     def draw(self, screen: Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))
