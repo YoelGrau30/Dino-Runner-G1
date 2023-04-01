@@ -1,12 +1,12 @@
 from pygame import Surface
 import pygame
 from pygame.sprite import Sprite
-from dino_runner.utils.constants import DUCKING, JUMPING, RUNNING
+from dino_runner.utils.constants_mario import DRIVING, JUMPING, RUNNING
 
 
 MARIO_JUMPING = "JUMPING"
 MARIO_RUNNING = "RUNNING"
-MARIO_DUCKING = "DUCKING"
+MARIO_DRIVING = "DRIVING"
 
 class SuperMario(Sprite):
     X_POS = 32
@@ -26,14 +26,14 @@ class SuperMario(Sprite):
             self.run()    
         elif self.action == MARIO_JUMPING:
             self.jump()
-        elif self.action == MARIO_DUCKING:
+        elif self.action == MARIO_DRIVING:
             self.car()
     
         if self.action != MARIO_JUMPING:
             if user_input[pygame.K_UP]:
                 self.action = MARIO_JUMPING
             elif user_input[pygame.K_DOWN]:
-                self.action = MARIO_DUCKING
+                self.action = MARIO_DRIVING
             else:
                 self.action = MARIO_RUNNING
     
@@ -63,9 +63,9 @@ class SuperMario(Sprite):
             self.jump_velocity = self.JUMP_VEL
 
     def car(self):
-        self.image = DUCKING[self.step // 5]
+        self.image = DRIVING[self.step // 5]
         self.rect.y = self.Y_POS + 36
-        self.action = MARIO_DUCKING
+        self.action = MARIO_DRIVING
 
     def draw(self, screen: Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))

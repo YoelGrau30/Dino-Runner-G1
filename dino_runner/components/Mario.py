@@ -1,5 +1,5 @@
 import pygame
-from dino_runner.utils.constants import DUCKING, JUMPING, RUNNING
+from dino_runner.utils.constants_mario import DRIVING, JUMPING, RUNNING
 from pygame.sprite import Sprite
 
 class Mario(Sprite):
@@ -56,9 +56,9 @@ class Mario(Sprite):
 
     def car(self):
         if self.step_index < 5:
-            self.image = DUCKING[0]
+            self.image = DRIVING[0]
         else:
-            self.image = DUCKING[1]
+            self.image = DRIVING[1]
         self.mario_rect = self.image.get_rect()
         self.mario_rect.x = self.X_POS
         self.mario_rect.y = self.Y_POS + 36
