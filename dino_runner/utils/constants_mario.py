@@ -55,3 +55,16 @@ DRIVING = [car_redimensionada1, car_redimensionada2]
 
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
+CLOUD_ANCHO = 97
+CLOUD_ALTO = 68
+CLOUD = [
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud1.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud2.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud3.png')), (CLOUD_ANCHO, CLOUD_ALTO))
+]
+#-------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+DINOSAUR = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Dinosaur.png"))
+FOSIL = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Fosil.png"))
+
