@@ -81,11 +81,6 @@ LARGE_TUNNEL = [
 ]
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
-#SMALL_TUNNEL = [
-  #  pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel1.png")),
-   # pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel2.png")),
-   # pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel3.png")),
-#]
 AN_1 = 40
 AN_2 = 68
 AN_3 = 105
@@ -98,3 +93,5 @@ SMALL_TUNNEL = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/SmallTunnel2.png")), (AN_2, AL_2)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/SmallTunnel3.png")), (AN_3, AL_3)),
 ]
+#-------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
