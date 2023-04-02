@@ -55,16 +55,46 @@ DRIVING = [car_redimensionada1, car_redimensionada2]
 
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
-CLOUD_ANCHO = 97
-CLOUD_ALTO = 68
 CLOUD = [
-    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
-    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud1.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
-    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud2.png')), (CLOUD_ANCHO, CLOUD_ALTO)),
-    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud3.png')), (CLOUD_ANCHO, CLOUD_ALTO))
+    pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud1.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud2.png')),
+    pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Cloud3.png')),
 ]
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
 DINOSAUR = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Dinosaur.png"))
 FOSIL = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Fosil.png"))
+#-------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+AN1 = 48
+AN2 = 99
+AN3 = 102
+AL1 = 95
+AL2 = 95
+AL3 = 95
 
+LARGE_TUNNEL = [
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel1.png")), (AN1, AL1)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel2.png")), (AN2, AL2)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel3.png")), (AN3, AL3))
+]
+#-------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------
+#SMALL_TUNNEL = [
+  #  pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel1.png")),
+   # pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel2.png")),
+   # pygame.image.load(os.path.join(IMG_DIR, "Tunnel/LargeTunnel3.png")),
+#]
+AN_1 = 40
+AN_2 = 68
+AN_3 = 105
+AL_1 = 71
+AL_2 = 71
+AL_3 = 71
+
+SMALL_TUNNEL = [
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/SmallTunnel1.png")), (AN_1, AL_1)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/SmallTunnel2.png")), (AN_2, AL_2)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Tunnel/SmallTunnel3.png")), (AN_3, AL_3)),
+]
