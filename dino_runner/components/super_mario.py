@@ -32,7 +32,7 @@ class SuperMario(Sprite):
         if self.action != MARIO_JUMPING:
             if user_input[pygame.K_UP] or user_input[pygame.K_w]:
                 self.action = MARIO_JUMPING
-            elif user_input[pygame.K_UP] or user_input[pygame.K_s]:
+            elif user_input[pygame.K_DOWN] or user_input[pygame.K_s]:
                 self.action = MARIO_DRIVING
             else:
                 self.action = MARIO_RUNNING
