@@ -89,8 +89,8 @@ HEART = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Ot
 
 ########################################################################################################################################
 
-IZQ_ANCHO = 50
-IZQ_ALTO = 50
+IZQ_ANCHO = 150
+IZQ_ALTO = 200
 
 IZQ = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Izq.png")), (IZQ_ANCHO, IZQ_ALTO))
 
@@ -103,29 +103,29 @@ KEY_CASTLE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mar
 
 ########################################################################################################################################
 
-LOGO_POINTS_ANCHO = 50
-LOGO_POINTS_ALTO = 50
+LOGO_POINTS_ANCHO = 40
+LOGO_POINTS_ALTO = 40
 
 LOGO_POINTS = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/LogoPoints.png")), (LOGO_POINTS_ANCHO, LOGO_POINTS_ALTO))
 
 ########################################################################################################################################
 
-MARIO_DEAD_ANCHO = 50
-MARIO_DEAD_ALTO = 50
+MARIO_DEAD_ANCHO = 300
+MARIO_DEAD_ALTO = 64
 
 MARIO_DEAD = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/MarioDead.png")), (MARIO_DEAD_ANCHO, MARIO_DEAD_ALTO))
 
 ########################################################################################################################################
 
-MARIO_LOVE_ANCHO = 50
-MARIO_LOVE_ALTO = 50
+MARIO_LOVE_ANCHO = 300
+MARIO_LOVE_ALTO = 300
 
 MARIO_LOVE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/MarioLove.png")), (MARIO_LOVE_ANCHO, MARIO_LOVE_ALTO))
 
 ########################################################################################################################################
 
-PLAY_ANCHO = 50
-PLAY_ALTO = 50
+PLAY_ANCHO = 40
+PLAY_ALTO = 40
 
 PLAY = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Play.png")), (PLAY_ANCHO, PLAY_ALTO))
 
