@@ -32,7 +32,7 @@ RUNNING = [run_redimensionada1, run_redimensionada2]
 #-------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------
 
-jump1 = os.path.join(IMG_DIR, "Mario/MarioRun1.png")
+jump1 = os.path.join(IMG_DIR, "Mario/MarioJump.png")
 ancho = 87
 alto = 98
 jump_original1 = pygame.image.load(jump1)
