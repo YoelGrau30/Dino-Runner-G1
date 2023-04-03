@@ -26,6 +26,16 @@ FOSIL = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Fosil.png"))
 
 ########################################################################################################################################
 
+PRINCESS_ANCHO = 70
+PRINCESS_ALTO = 70
+
+PRINCESS = [
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Princess1.png")), (PRINCESS_ANCHO, PRINCESS_ALTO)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Princess2.png")), (PRINCESS_ANCHO, PRINCESS_ALTO)),
+    ]
+
+########################################################################################################################################
+
 CASTLE_ANCHO = 215
 CASTLE_ALTO = 355
 
