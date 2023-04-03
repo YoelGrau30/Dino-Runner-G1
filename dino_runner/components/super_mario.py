@@ -53,8 +53,8 @@ class SuperMario(Sprite):
 
     def jump(self):
         self.image = JUMPING
-        self.rect.y -= self.jump_velocity * 4
-        self.jump_velocity -= 0.8
+        self.rect.y -= self.jump_velocity * 3.3
+        self.jump_velocity -= 0.6
         #print(self.rect.y, self.jump_velocity, sep=": :")
         
         if self.rect.y >= self.Y_POS:
