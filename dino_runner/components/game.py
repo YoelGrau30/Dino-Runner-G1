@@ -1,4 +1,5 @@
 import pygame
+from dino_runner.components.castle import CastleMario
 #from dino_runner.components.mario import Mario
 from dino_runner.components.super_mario import SuperMario
 from pygame import Surface
@@ -19,6 +20,7 @@ class Game:
         self.y_pos_bg = 442
         #self.player = Mario()
         self.player = SuperMario()
+        self.castle = CastleMario()
 
     def run(self):
         # Game loop: events - update - draw
@@ -43,6 +45,7 @@ class Game:
         self.screen.fill((0, 188, 255))
         self.draw_background()
         self.player.draw(self.screen)
+        self.castle.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
