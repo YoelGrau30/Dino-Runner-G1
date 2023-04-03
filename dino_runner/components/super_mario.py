@@ -1,7 +1,7 @@
 from pygame import Surface
 import pygame
 from pygame.sprite import Sprite
-from dino_runner.utils.constants_mario import DRIVING, JUMPING, RUNNING
+from dino_runner.utils.constants_mario import DRIVING, DRIVING_GIGANT, DRIVING_SHIELD, JUMPING, RUNNING
 
 
 MARIO_JUMPING = "JUMPING"
@@ -55,7 +55,7 @@ class SuperMario(Sprite):
         self.image = JUMPING
         self.rect.y -= self.jump_velocity * 4
         self.jump_velocity -= 0.8
-        print(self.rect.y, self.jump_velocity, sep=": :")
+        #print(self.rect.y, self.jump_velocity, sep=": :")
         
         if self.rect.y >= self.Y_POS:
             self.action = MARIO_RUNNING
