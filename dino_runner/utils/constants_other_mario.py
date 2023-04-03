@@ -27,7 +27,7 @@ FOSIL = pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Fosil.png"))
 ########################################################################################################################################
 
 CASTLE_ANCHO = 215
-CASTLE_ALTO = 398
+CASTLE_ALTO = 355
 
 CASTLE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Castle.png")), (CASTLE_ANCHO, CASTLE_ALTO))
 

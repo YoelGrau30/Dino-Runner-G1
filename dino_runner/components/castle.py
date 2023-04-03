@@ -7,7 +7,7 @@ from dino_runner.utils.constants_other_mario import CASTLE
 class CastleMario(Sprite):
 
     X_POS = 888
-    Y_POS = 44
+    Y_POS = 88
 
     def __init__(self):
         self.image = CASTLE
