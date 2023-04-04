@@ -1,5 +1,6 @@
 import pygame
 from dino_runner.components.castle import CastleMario
+from dino_runner.components.cloud import CloudMario
 from dino_runner.components.princess import PrincessMario
 #from dino_runner.components.mario import Mario
 from dino_runner.components.super_mario import SuperMario
@@ -20,9 +21,11 @@ class Game:
         self.x_pos_bg = 0
         self.y_pos_bg = 442
         #self.player = Mario()
+        self.cloud = CloudMario()
         self.player = SuperMario()
         self.castle = CastleMario()
         self.princess = PrincessMario()
+        
 
     def run(self):
         # Game loop: events - update - draw
@@ -40,13 +43,16 @@ class Game:
 
     def update(self):
         user_input = pygame.key.get_pressed()
+        self.cloud.update()
         self.player.update(user_input)
         self.princess.update()
+
 
     def draw(self):
         self.clock.tick(FPS)
         self.screen.fill((0, 188, 255))
         self.draw_background()
+        self.cloud.draw(self.screen)
         self.player.draw(self.screen)
         self.castle.draw(self.screen)
         self.princess.draw(self.screen)
