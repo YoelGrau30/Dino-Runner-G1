@@ -6,7 +6,7 @@ from dino_runner.utils.constants_enemys import DRY_BOWSER
 
 class DryBowser(Obstacle):
     def __init__(self):
-        super().__init__(DRY_BOWSER[0], POS_Y = 356)
+        super().__init__(DRY_BOWSER[0], POS_Y = 336)
         self.step = 0
 
     def update(self, game_speed, obstacles):

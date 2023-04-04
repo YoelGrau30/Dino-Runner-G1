@@ -6,7 +6,7 @@ from dino_runner.utils.constants_other_mario import CLOUD
 class CloudMario(Sprite):
 
     X_POS = 1000
-    Y_POS = random.randint(120, 400)
+    Y_POS = random.randint(100, 400)
 
     def __init__(self):
         self.image = CLOUD[0]

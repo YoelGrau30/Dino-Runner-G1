@@ -7,7 +7,7 @@ from dino_runner.utils.constants_enemys import BUM
 class Bum(Obstacle):
     def __init__(self):
         random_img = random.randint(0,2)
-        super().__init__(BUM[0], POS_Y = 356)
+        super().__init__(BUM[0], POS_Y = 359)
         self.step = 0
 
     def update(self, game_speed, obstacles):
