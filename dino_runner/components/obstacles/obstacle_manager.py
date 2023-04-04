@@ -9,6 +9,7 @@ from dino_runner.components.obstacles.chain_chomp import ChainChomp
 from dino_runner.components.obstacles.dry_bowser import DryBowser
 from dino_runner.components.obstacles.ghost import Ghost
 from dino_runner.components.obstacles.obstacle import Obstacle
+from dino_runner.components.obstacles.thwomp import Thwomp
 from dino_runner.components.obstacles.troppa_red import TroppaRed
 from dino_runner.components.obstacles.tunnel_large import TunnelLarge
 from dino_runner.components.obstacles.tunnel_small import TunnelSmall
@@ -16,7 +17,6 @@ from dino_runner.components.obstacles.turtle import TurTle
 from dino_runner.components.obstacles.turtle_fly_blue import TurtleFlyBlue
 from dino_runner.components.obstacles.turtle_fly_green import TurtleFlyGreen
 from dino_runner.components.obstacles.turtle_fly_red import TurtleFlyRed
-from dino_runner.utils.constants_enemys import BILL_BALA, BOWSER, BUM, CHAIN_CHOMP, DRY_BOWSER, GHOST, LARGE_TUNNEL, SMALL_TUNNEL, TROPPA_RED, TURTLE, TURTLE_FLY_BLUE, TURTLE_FLY_GREEN, TURTLE_FLY_RED
 
 class ObstacleManager:
     def __init__(self):
@@ -42,9 +42,10 @@ class ObstacleManager:
                 Ghost(),                # 13
                 TroppaRed(),            # 14
                 TurTle(),               # 15
-                ChainChomp()            # 16
+                ChainChomp(),           # 16
+                Thwomp(),               # 17
                 ]
-            self.obstacles.append(TYPES[random.randint(0, 16)])
+            self.obstacles.append(TYPES[random.randint(0, 17)])
 
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)

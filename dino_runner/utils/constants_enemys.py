@@ -95,9 +95,12 @@ GHOST = [
 
 ########################################################################################################################################
 
-#THWOMP_WIDTH = 60
-#THWOMP_HEIGHT = 70
-#THWOMP = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Thwomp1.png")), (THWOMP_WIDTH, THWOMP_HEIGHT)),
+THWOMP_WIDTH = 70
+THWOMP_HEIGHT = 70
+THWOMP = [
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Thwomp.png")), (THWOMP_WIDTH, THWOMP_HEIGHT)),
+    pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Thwomp2.png")), (THWOMP_WIDTH, THWOMP_HEIGHT)),
+]
 
 ########################################################################################################################################
 
