@@ -7,7 +7,7 @@ from dino_runner.utils.constants_enemys import TURTLE_FLY_GREEN
 class TurtleFlyGreen(Obstacle):
     def __init__(self):
         random_img = random.randint(0,2)
-        super().__init__(TURTLE_FLY_GREEN[random_img], POS_Y = random.randint(100, 300))
+        super().__init__(TURTLE_FLY_GREEN[0], POS_Y = (random.randint(100, 300)))
         self.step = 0
 
     def update(self, game_speed, obstacles):

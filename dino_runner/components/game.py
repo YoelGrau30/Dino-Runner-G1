@@ -27,7 +27,7 @@ class Game:
         self.player = SuperMario()
         self.castle = CastleMario()
         self.princess = PrincessMario()
-        self.obstacle_manager = ObstacleManager
+        self.obstacle_manager = ObstacleManager()
         
 
     def run(self):

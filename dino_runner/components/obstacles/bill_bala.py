@@ -6,8 +6,7 @@ from dino_runner.utils.constants_enemys import BILL_BALA
 
 class BillBala(Obstacle):
     def __init__(self):
-        random_img = random.randint(0,2)
-        super().__init__(BILL_BALA[random_img], POS_Y = random.randint(100, 300))
+        super().__init__(BILL_BALA[0], POS_Y = (random.randint(100, 300)))
         self.step = 0
 
     def update(self, game_speed, obstacles):

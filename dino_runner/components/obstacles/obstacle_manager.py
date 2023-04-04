@@ -12,6 +12,7 @@ from dino_runner.components.obstacles.obstacle import Obstacle
 from dino_runner.components.obstacles.troppa_red import TroppaRed
 from dino_runner.components.obstacles.tunnel_large import TunnelLarge
 from dino_runner.components.obstacles.tunnel_small import TunnelSmall
+from dino_runner.components.obstacles.turtle import TurTle
 from dino_runner.components.obstacles.turtle_fly_blue import TurtleFlyBlue
 from dino_runner.components.obstacles.turtle_fly_green import TurtleFlyGreen
 from dino_runner.components.obstacles.turtle_fly_red import TurtleFlyRed
@@ -25,27 +26,25 @@ class ObstacleManager:
         #if len(self.obstacles) == 0:
         if not self.obstacles: 
             TYPES = [
-                TunnelSmall(SMALL_TUNNEL[0]),
-                TunnelSmall(SMALL_TUNNEL[1]),
-                TunnelSmall(SMALL_TUNNEL[2]),
-                TunnelLarge(LARGE_TUNNEL[0]), 
-                TunnelLarge(LARGE_TUNNEL[1]),
-                TunnelLarge(LARGE_TUNNEL[2]),
-                TurtleFlyBlue(TURTLE_FLY_BLUE[0]),
-                TurtleFlyRed(TURTLE_FLY_RED[0]),
-                TurtleFlyGreen(TURTLE_FLY_GREEN[0]),
-                BillBala(BILL_BALA[0]),
-                Bowser(BOWSER[0]),
-                Bum(BUM[0]),
-                DryBowser(DRY_BOWSER[0]),
-                Ghost(GHOST[0]),
-                TroppaRed(TROPPA_RED[0]),
-                Turtle(TURTLE[0]),
-                Turtle(TURTLE[1]),
-                Turtle(TURTLE[3]),
-                ChainChomp(CHAIN_CHOMP[0])
+                TunnelSmall(),          # 0
+                TunnelSmall(),          # 1
+                TunnelSmall(),          # 2
+                TunnelLarge(),          # 3
+                TunnelLarge(),          # 4
+                TunnelLarge(),          # 5
+                TurtleFlyBlue(),        # 6
+                TurtleFlyRed(),         # 7
+                TurtleFlyGreen(),       # 8
+                BillBala(),             # 9
+                Bowser(),               # 10
+                Bum(),                  # 11
+                DryBowser(),            # 12
+                Ghost(),                # 13
+                TroppaRed(),            # 14
+                TurTle(),               # 15
+                ChainChomp()            # 16
                 ]
-            self.obstacles.append(TYPES[random.randint(0, 6)])
+            self.obstacles.append(TYPES[random.randint(0, 16)])
 
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)
