@@ -50,8 +50,8 @@ BILL_BALA = [
 
 ########################################################################################################################################
 
-BOWSER_WIDTH = 60
-BOWSER_HEIGHT = 70
+BOWSER_WIDTH = 107
+BOWSER_HEIGHT = 116
 BOWSER = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Bowser1.png")), (BOWSER_WIDTH, BOWSER_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Bowser2.png")), (BOWSER_WIDTH, BOWSER_HEIGHT)),
@@ -68,8 +68,8 @@ BUM = [
 
 ########################################################################################################################################
 
-CHAIN_CHOMP_WIDTH = 60
-CHAIN_CHOMP_HEIGHT = 70
+CHAIN_CHOMP_WIDTH = 96
+CHAIN_CHOMP_HEIGHT = 62
 CHAIN_CHOMP = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/ChainChomp1.png")), (CHAIN_CHOMP_WIDTH, CHAIN_CHOMP_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/ChainChomp2.png")), (CHAIN_CHOMP_WIDTH, CHAIN_CHOMP_HEIGHT)),
@@ -77,8 +77,8 @@ CHAIN_CHOMP = [
 
 ########################################################################################################################################
 
-DRY_BOWSER_WIDTH = 60
-DRY_BOWSER_HEIGHT = 70
+DRY_BOWSER_WIDTH = 98
+DRY_BOWSER_HEIGHT = 116
 DRY_BOWSER = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/DryBowser1.png")), (DRY_BOWSER_WIDTH, DRY_BOWSER_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/DryBowser2.png")), (DRY_BOWSER_WIDTH, DRY_BOWSER_HEIGHT)),
@@ -113,8 +113,8 @@ TROPPA_RED = [
 
 ########################################################################################################################################
 
-TURTLE_WIDTH = 60
-TURTLE_HEIGHT = 70
+TURTLE_WIDTH = 50
+TURTLE_HEIGHT = 50
 
 TURTLE = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/TurtleBlue.png")), (TURTLE_WIDTH, TURTLE_HEIGHT)),
