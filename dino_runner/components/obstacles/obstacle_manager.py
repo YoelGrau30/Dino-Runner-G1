@@ -26,25 +26,27 @@ class ObstacleManager:
         #if len(self.obstacles) == 0:
         if not self.obstacles: 
             TYPES = [
-    #            TunnelSmall(),          # 0
-    #            TunnelSmall(),          # 0
+                TunnelSmall(),          # 0
+                TunnelSmall(),          # 1
+                TunnelLarge(),          # 2
                 TunnelLarge(),          # 3
-                TunnelLarge()
-    #            TurtleFlyBlue(),        # 6
-    #            TurtleFlyRed(),         # 7
-    #            TurtleFlyGreen(),       # 8
-    #           BillBala(),             # 9
-    #            Bowser(),               # 10
-    #            Bum(),                  # 11
-    #            Bum(),                  # 11
-    #            DryBowser(),            # 12
-    #            Ghost(),                # 13
-    #            TroppaRed(),            # 14
-    #            TurTle(),               # 15
-    #            ChainChomp(),           # 16
-    #            Thwomp(),               # 17
+                TurtleFlyBlue(),        # 4
+                TurtleFlyBlue(),        # 5
+                TurtleFlyRed(),         # 6
+                TurtleFlyGreen(),       # 7
+                BillBala(),             # 8
+                Thwomp(),               # 9
+                Bowser(),               # 10
+                Bum(),                  # 11
+                Bum(),                  # 12
+                DryBowser(),            # 13
+                Ghost(),                # 14
+                TroppaRed(),            # 15
+                TurTle(),               # 16
+                ChainChomp(),           # 17
+                Thwomp(),               # 18
                 ]
-            self.obstacles.append(TYPES[random.randint(0, 1)])
+            self.obstacles.append(TYPES[random.randint(0, 18)])
 
 
         for obstacle in self.obstacles:
