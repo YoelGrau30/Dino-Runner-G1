@@ -8,10 +8,10 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 LARGE_TUNNEL_WIDTH_1 = 48
 LARGE_TUNNEL_HEIGHT_1 = 95
 
-LARGE_TUNNEL_WIDTH_2 = 99
+LARGE_TUNNEL_WIDTH_2 = 89
 LARGE_TUNNEL_HEIGHT_2 = 95
 
-LARGE_TUNNEL_WIDTH_3 = 102
+LARGE_TUNNEL_WIDTH_3 = 99
 LARGE_TUNNEL_HEIGHT_3 = 95
 
 
@@ -29,7 +29,7 @@ SMALL_TUNNEL_HEIGHT_1 = 71
 SMALL_TUNNEL_WIDTH_2 = 68
 SMALL_TUNNEL_HEIGHT_2 = 71
 
-SMALL_TUNNEL_WIDTH_3 = 105
+SMALL_TUNNEL_WIDTH_3 = 99
 SMALL_TUNNEL_HEIGHT_3 = 71
 
 SMALL_TUNNEL = [
@@ -41,8 +41,8 @@ SMALL_TUNNEL = [
 #-------------------------------------------------------------------------------------------------------
 # ESTRUCTURA DE ENEMIGOS
 #-------------------------------------------------------------------------------------------------------
-BILL_BALA_WIDTH = 60
-BILL_BALA_HEIGHT = 70
+BILL_BALA_WIDTH = 70
+BILL_BALA_HEIGHT = 50
 BILL_BALA = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/BillBala1.png")), (BILL_BALA_WIDTH, BILL_BALA_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/BillBala2.png")), (BILL_BALA_WIDTH, BILL_BALA_HEIGHT)),
@@ -59,8 +59,8 @@ BOWSER = [
 
 ########################################################################################################################################
 
-BUM_WIDTH = 60
-BUM_HEIGHT = 70
+BUM_WIDTH = 70
+BUM_HEIGHT = 83
 BUM = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Bum1.png")), (BUM_WIDTH, BUM_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/Bum2.png")), (BUM_WIDTH, BUM_HEIGHT)),
@@ -104,8 +104,8 @@ THWOMP = [
 
 ########################################################################################################################################
 
-TROPPA_RED_WIDTH = 60
-TROPPA_RED_HEIGHT = 70
+TROPPA_RED_WIDTH = 70
+TROPPA_RED_HEIGHT = 85
 TROPPA_RED = [
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/TroppaRed1.png")), (TROPPA_RED_WIDTH, TROPPA_RED_HEIGHT)),
     pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Enemys/TroppaRed2.png")), (TROPPA_RED_WIDTH, TROPPA_RED_HEIGHT)),
