@@ -15,6 +15,8 @@ ICON = pygame.image.load(os.path.join(IMG_DIR, "LogoMario.png"))
 
 DEFAULT_TYPE = "default"
 
+INICIAL_GAME_SPEED = 20
+
 #-------------------------------------------------------------------------------------------------------
 # ESTRUCTURA DE IMAGENES PARA CUANDO CORRE
 #-------------------------------------------------------------------------------------------------------

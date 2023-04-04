@@ -12,10 +12,6 @@ class CastleMario(Sprite):
     def __init__(self):
         self.image = CASTLE
         self.rect = self.image.get_rect()
-        self.position()
-
-
-    def position(self):
         self.rect.x = self.X_POS
         self.rect.y = self.Y_POS
 

@@ -12,7 +12,8 @@ class PrincessMario(Sprite):
     def __init__(self):
         self.image = PRINCESS[0]
         self.rect = self.image.get_rect()
-        self.position()
+        self.rect.x = self.X_POS
+        self.rect.y = self.Y_POS
         self.step = 0
 
     def update(self):
@@ -20,10 +21,6 @@ class PrincessMario(Sprite):
         self.step += 1
         if self.step >= 10:
             self.step = 0
-
-    def position(self):
-        self.rect.x = self.X_POS
-        self.rect.y = self.Y_POS
 
     def draw(self, screen: pygame.Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))

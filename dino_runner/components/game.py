@@ -1,6 +1,7 @@
 import pygame
 from dino_runner.components.castle import CastleMario
 from dino_runner.components.cloud import CloudMario
+from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.princess import PrincessMario
 #from dino_runner.components.mario import Mario
 from dino_runner.components.super_mario import SuperMario
@@ -10,6 +11,7 @@ from dino_runner.utils.constants_mario import BG, ICON, SCREEN_HEIGHT, SCREEN_WI
 
 
 class Game:
+
     def __init__(self):
         pygame.init()
         pygame.display.set_caption(TITLE)
@@ -25,6 +27,7 @@ class Game:
         self.player = SuperMario()
         self.castle = CastleMario()
         self.princess = PrincessMario()
+        self.obstacle_manager = ObstacleManager
         
 
     def run(self):
@@ -36,6 +39,7 @@ class Game:
             self.draw()
         pygame.quit()
 
+
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -46,6 +50,7 @@ class Game:
         self.cloud.update()
         self.player.update(user_input)
         self.princess.update()
+        self.obstacle_manager.update(self)
 
 
     def draw(self):
@@ -56,6 +61,7 @@ class Game:
         self.player.draw(self.screen)
         self.castle.draw(self.screen)
         self.princess.draw(self.screen)
+        self.obstacle_manager.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
