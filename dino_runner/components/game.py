@@ -35,6 +35,7 @@ class Game:
         self.princess = PrincessMario()
         self.obstacle_manager = ObstacleManager()
         self.score = 0
+        self.death_count = 0
         
 
     def run(self):
@@ -66,7 +67,7 @@ class Game:
         self.cloud.update()
         self.player.update(user_input)
         self.princess.update()
-        self.obstacle_manager.update(self)
+        self.obstacle_manager.update(self.game_speed, self.player, self.on_death)
 
 
     def draw(self):
@@ -79,7 +80,7 @@ class Game:
         self.bander_bowser.draw(self.screen)
         self.player.draw(self.screen)
         self.princess.draw(self.screen)
-        self.obstacle_manager.draw(self.screen)
+        self.obstacle_manager.draw(self.screen, self.on_death)
         self.right_castle.draw(self.screen)
         self.score.draw(self.screen)
         pygame.display.update()
@@ -99,15 +100,26 @@ class Game:
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
         self.screen.fill((243, 156, 18))
-        font = pygame.font.Font("freesansbold.ttf", 30)
-        text = font.render("PRESS START", True, (0, 0, 0))
-        text_rect = text.get_rect()
-        text_rect.center = (half_screen_width, half_screen_height)
-        self.screen.blit(text, text_rect)
-        self.screen.blit(SUPER_MARIO,(half_screen_width - 45, 
+        if self.death_count:
+            pass
+        else:
+            font = pygame.font.Font("freesansbold.ttf", 30)
+            text = font.render("PRESS START", True, (0, 0, 0))
+            text_rect = text.get_rect()
+            text_rect.center = (half_screen_width, half_screen_height)
+            self.screen.blit(text, text_rect)
+            self.screen.blit(SUPER_MARIO,(half_screen_width - 45, 
                                       half_screen_height - 140))
+            
         pygame.display.flip()
         self.menu_events()
+
+
+    def on_death(self):
+        pygame.time.delay(2000)
+        self.playing = False
+        self.death_count += 1
+
 
     def menu_events(self):
         for event in pygame.event.get():

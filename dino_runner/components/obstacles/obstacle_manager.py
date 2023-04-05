@@ -22,7 +22,7 @@ class ObstacleManager:
     def __init__(self):
         self.obstacles: list[Obstacle] = []
 
-    def update(self, game):
+    def update(self, game_speed, player, on_death):
         #if len(self.obstacles) == 0:
         if not self.obstacles: 
             TYPES = [
@@ -50,10 +50,9 @@ class ObstacleManager:
 
 
         for obstacle in self.obstacles:
-            obstacle.update(game.game_speed, self.obstacles)
-            if obstacle.rect.colliderect(game.player.rect):
-                pygame.time.delay(2000)
-                game.playing = False
+            obstacle.update(game_speed, self.obstacles)
+            if obstacle.rect.colliderect(player.rect):
+                on_death()
 
     def draw(self, screen):
         for obstacle in self.obstacles:
