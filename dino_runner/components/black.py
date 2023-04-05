@@ -4,10 +4,10 @@ from pygame.sprite import Sprite
 from dino_runner.utils.constants_other_mario import BLACK
 
 
-class CastleLeft(Sprite):
+class Black(Sprite):
 
-    X_POS = 180
-    Y_POS = 88
+    X_POS = 980
+    Y_POS = 284
 
     def __init__(self):
         self.image = BLACK

@@ -43,15 +43,15 @@ CASTLE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_O
 
 ########################################################################################################################################
 
-PARTS_WIDTH = 107
-PARTS_LEFT = 34
+PARTS_WIDTH = 118
+PARTS_LEFT = 355
 
 CASTLE_RIGHT = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/CastleRight.png")), (PARTS_WIDTH, PARTS_LEFT))
 CASTLE_LEFT = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/CastleLeft.png")), (PARTS_WIDTH, PARTS_LEFT))
 
 ########################################################################################################################################
 
-BLACK_WIDTH = 80
+BLACK_WIDTH = 90
 BLACK_LEFT = 160
 
 BLACK = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Black.png")), (BLACK_WIDTH, BLACK_LEFT))

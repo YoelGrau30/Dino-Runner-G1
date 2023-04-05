@@ -6,8 +6,8 @@ from dino_runner.utils.constants_other_mario import PRINCESS
 
 class PrincessMario(Sprite):
 
-    X_POS = 930
-    Y_POS = 157
+    X_POS = 954
+    Y_POS = 159
 
     def __init__(self):
         self.image = PRINCESS[0]

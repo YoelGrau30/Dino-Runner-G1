@@ -6,7 +6,7 @@ from dino_runner.utils.constants_other_mario import CASTLE_LEFT
 
 class CastleLeft(Sprite):
 
-    X_POS = 444
+    X_POS = 911
     Y_POS = 88
 
     def __init__(self):

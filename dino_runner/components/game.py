@@ -1,5 +1,7 @@
 import pygame
-from dino_runner.components.castle import CastleMario
+from dino_runner.components.black import Black
+from dino_runner.components.castle_left import CastleLeft
+from dino_runner.components.castle_rigth import CastleRight
 from dino_runner.components.cloud import CloudMario
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.princess import PrincessMario
@@ -23,7 +25,9 @@ class Game:
         self.y_pos_bg = 442
         self.cloud = CloudMario()
         self.player = SuperMario()
-        self.castle = CastleMario()
+        self.right_castle = CastleRight()
+        self.left_castle = CastleLeft()
+        self.black = Black()
         self.princess = PrincessMario()
         self.obstacle_manager = ObstacleManager()
         
@@ -56,8 +60,10 @@ class Game:
         self.screen.fill((36, 113, 163))
         self.cloud.draw(self.screen)
         self.draw_background()
+        self.black.draw(self.screen)
+        self.left_castle.draw(self.screen)
         self.player.draw(self.screen)
-        self.castle.draw(self.screen)
+        self.right_castle.draw(self.screen)
         self.princess.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         pygame.display.update()
