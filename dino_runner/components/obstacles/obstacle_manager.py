@@ -46,7 +46,7 @@ class ObstacleManager:
                 ChainChomp(),           # 17
                 Thwomp(),               # 18
                 ]
-            self.obstacles.append(TYPES[random.randint(0, 18)])
+            self.obstacles.append(random.choice(TYPES))
 
 
         for obstacle in self.obstacles:

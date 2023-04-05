@@ -1,6 +1,8 @@
 import pygame
 from pygame.sprite import Sprite
 
+from dino_runner.utils.constants_other_mario import LOGO_POINTS
+
 FONT_SCORE = "freesansbold.ttf"
 COLOR = (189, 189, 189)
 
@@ -18,5 +20,6 @@ class Score(Sprite):
         font = pygame.font.Font(FONT_SCORE, 22)
         text = font.render(f"SCORE: {self.score}", True, COLOR)
         text_rect = text.get_rect()
-        text_rect.center = (500, 30)
+        text_rect.center = (512, 40)
         screen.blit(text, text_rect)
+        screen.blit(LOGO_POINTS,(395, 15))
