@@ -170,6 +170,10 @@ DRIVING_YOSHI = [CAR_YOSHI_REDIMENCIONADA_1, CAR_YOSHI_REDIMENCIONADA_2]
 
 
 ########################################################################################################################################
+MARIO_ANGEL_WIDTH = 67
+MARIO_ANGEL__HEIGHT = 78
+
+MARIO_ANGEL = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario/MarioAngel.png")), (MARIO_ANGEL_WIDTH, MARIO_ANGEL__HEIGHT))
 
 
 
