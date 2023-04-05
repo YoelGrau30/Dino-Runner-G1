@@ -9,7 +9,7 @@ class CloudMario(Sprite):
     X_POS = 1000
     Y_POS = 250 
     AMPLITUDE = 145 # Altura de la onda
-    PERIOD = 90 #70     # Cantidad de frames por ciclo de onda
+    PERIOD = 90     # Ciclo de cada onda
 
     def __init__(self):
         self.image = CLOUD[0]

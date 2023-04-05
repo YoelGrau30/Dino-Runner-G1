@@ -55,7 +55,7 @@ class Game:
 
     def draw(self):
         self.clock.tick(FPS)
-        self.screen.fill((0, 188, 255))
+        self.screen.fill((36, 113, 163))
         self.cloud.draw(self.screen)
         self.draw_background()
         self.player.draw(self.screen)
