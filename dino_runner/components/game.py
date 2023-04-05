@@ -1,4 +1,5 @@
 import pygame
+from dino_runner.components.bander_bowser import BanderBowser
 from dino_runner.components.black import Black
 from dino_runner.components.castle_left import CastleLeft
 from dino_runner.components.castle_rigth import CastleRight
@@ -28,6 +29,7 @@ class Game:
         self.right_castle = CastleRight()
         self.left_castle = CastleLeft()
         self.black = Black()
+        self.bander_bowser = BanderBowser()
         self.princess = PrincessMario()
         self.obstacle_manager = ObstacleManager()
         
@@ -62,10 +64,11 @@ class Game:
         self.draw_background()
         self.black.draw(self.screen)
         self.left_castle.draw(self.screen)
+        self.bander_bowser.draw(self.screen)
         self.player.draw(self.screen)
-        self.right_castle.draw(self.screen)
         self.princess.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
+        self.right_castle.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 

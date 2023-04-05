@@ -56,6 +56,12 @@ BLACK_LEFT = 160
 
 BLACK = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Black.png")), (BLACK_WIDTH, BLACK_LEFT))
 
+########################################################################################################################################
+
+BANDER_BOWSER_WIDTH = 46
+BANDER_BOWSER_LEFT = 85
+
+BANDER_BOWSER = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/BanderBowser.png")), (BANDER_BOWSER_WIDTH, BANDER_BOWSER_LEFT))
 
 ########################################################################################################################################
 

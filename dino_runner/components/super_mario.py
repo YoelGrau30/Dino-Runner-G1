@@ -11,7 +11,7 @@ MARIO_RIGHT = "RUNNING"
 
 class SuperMario(Sprite):
     X_POS = 32
-    Y_POS = 356 + 20
+    Y_POS = 356 + 17
     JUMP_VEL = 8.5
 
     def __init__(self):
