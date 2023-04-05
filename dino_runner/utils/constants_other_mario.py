@@ -156,8 +156,8 @@ MARIO_LOVE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mar
 
 ########################################################################################################################################
 
-PLAY_WIDTH = 40
-PLAY_HEIGHT = 40
+PLAY_WIDTH = 80
+PLAY_HEIGHT = 80
 
 PLAY = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Play.png")), (PLAY_WIDTH, PLAY_HEIGHT))
 
@@ -169,8 +169,8 @@ SHIELD = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_O
 
 ########################################################################################################################################
 
-SUPER_MARIO_WIDTH = 50
-SUPER_MARIO_HEIGHT = 50
+SUPER_MARIO_WIDTH = 900
+SUPER_MARIO_HEIGHT = 450
 
 SUPER_MARIO = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/SuperMario.png")), (SUPER_MARIO_WIDTH, SUPER_MARIO_HEIGHT))
 

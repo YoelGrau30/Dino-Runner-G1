@@ -6,12 +6,15 @@ from dino_runner.components.castle_rigth import CastleRight
 from dino_runner.components.cloud import CloudMario
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.princess import PrincessMario
+from dino_runner.components.score import Score
 from dino_runner.components.super_mario import SuperMario
 from pygame import Surface
 
 from dino_runner.utils.constants_mario import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
-from dino_runner.utils.constants_other_mario import SUPER_MARIO
+from dino_runner.utils.constants_other_mario import PLAY, SUPER_MARIO
 
+FONT_STYLE = "freesansbold.ttf"
+BLACK_COLOR = (0,0,0)
 
 class Game:
 
@@ -34,14 +37,14 @@ class Game:
         self.bander_bowser = BanderBowser()
         self.princess = PrincessMario()
         self.obstacle_manager = ObstacleManager()
-        self.score = 0
+        self.score_mario = Score()
         self.death_count = 0
         
 
     def run(self):
         # Game loop: events - update - draw
-        self.playing = True
-        while self.playing:
+        self.running = True
+        while self.running:
             if not self.playing:
                 self.show_menu()
 
@@ -63,6 +66,7 @@ class Game:
                 self.running = False
 
     def update(self):
+        self.score_mario.update(self)
         user_input = pygame.key.get_pressed()
         self.cloud.update()
         self.player.update(user_input)
@@ -80,9 +84,9 @@ class Game:
         self.bander_bowser.draw(self.screen)
         self.player.draw(self.screen)
         self.princess.draw(self.screen)
-        self.obstacle_manager.draw(self.screen, self.on_death)
+        self.obstacle_manager.draw(self.screen)
         self.right_castle.draw(self.screen)
-        self.score.draw(self.screen)
+        self.score_mario.draw(self.screen)
         pygame.display.update()
         pygame.display.flip()
 
@@ -103,13 +107,13 @@ class Game:
         if self.death_count:
             pass
         else:
-            font = pygame.font.Font("freesansbold.ttf", 30)
-            text = font.render("PRESS START", True, (0, 0, 0))
+            font = pygame.font.Font(FONT_STYLE, 27)
+            text = font.render("ENTER SPACE = PLAY", True, BLACK_COLOR)
             text_rect = text.get_rect()
-            text_rect.center = (half_screen_width, half_screen_height)
+            text_rect.center = (half_screen_width + 86, half_screen_height + 250)
             self.screen.blit(text, text_rect)
-            self.screen.blit(SUPER_MARIO,(half_screen_width - 45, 
-                                      half_screen_height - 140))
+            self.screen.blit(SUPER_MARIO,(half_screen_width - 460, half_screen_height - 240))
+            self.screen.blit(PLAY,(half_screen_width - 160 , half_screen_height + 210))
             
         pygame.display.flip()
         self.menu_events()
