@@ -176,8 +176,8 @@ SUPER_MARIO = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Ma
 
 ########################################################################################################################################
 
-SURPRISE_WIDTH = 50
-SURPRISE_HEIGHT = 50
+SURPRISE_WIDTH = 97
+SURPRISE_HEIGHT = 101
 
 SURPRISE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Surprise.png")), (SURPRISE_WIDTH, SURPRISE_HEIGHT))
 
