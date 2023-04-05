@@ -7,10 +7,11 @@ from dino_runner.utils.constants_mario import DRIVING, DRIVING_GIGANT, DRIVING_S
 MARIO_JUMPING = "JUMPING"
 MARIO_RUNNING = "RUNNING"
 MARIO_DRIVING = "DRIVING"
+MARIO_RIGHT = "RUNNING"
 
 class SuperMario(Sprite):
     X_POS = 32
-    Y_POS = 356
+    Y_POS = 356 + 20
     JUMP_VEL = 8.5
 
     def __init__(self):
@@ -64,9 +65,10 @@ class SuperMario(Sprite):
 
     def car(self):
         self.image = DRIVING[self.step // 5]
-        self.rect.y = self.Y_POS + 36
+        self.rect.y = self.Y_POS + 16
         self.step += 1
         self.action = MARIO_DRIVING
+
 
     def draw(self, screen: Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))

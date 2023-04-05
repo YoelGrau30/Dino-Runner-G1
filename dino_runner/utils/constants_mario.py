@@ -23,8 +23,8 @@ INICIAL_GAME_SPEED = 20
 
 RUN_1 = os.path.join(IMG_DIR, "Mario/MarioRun1.png")
 RUN_2 = os.path.join(IMG_DIR, "Mario/MarioRun2.png")
-RUN_WIDTH = 87
-RUN_HEIGHT = 98
+RUN_WIDTH = 67
+RUN_HEIGHT = 78
 
 RUN_ORIGINAL_1 = pygame.image.load(RUN_1)
 RUN_REDIMENCIONADA_1 = pygame.transform.scale(RUN_ORIGINAL_1, (RUN_WIDTH, RUN_HEIGHT))
@@ -78,8 +78,8 @@ RUNNING_GIGANT = [RUN_GIGANT_REDIMENCIONADA_1, RUN_GIGANT_REDIMENCIONADA_2]
 #------------------------------------------------------------------------------------------------------
 
 JUMP = os.path.join(IMG_DIR, "Mario/MarioJump.png")
-JUMP_WIDTH = 87
-JUMP_HEIGHT = 98
+JUMP_WIDTH = 67
+JUMP_HEIGHT = 78
 JUMP_ORIGINAL = pygame.image.load(JUMP)
 JUMP_REDIMENCIONADA = pygame.transform.scale(JUMP_ORIGINAL, (JUMP_WIDTH, JUMP_HEIGHT))
 

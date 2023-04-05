@@ -3,7 +3,6 @@ from dino_runner.components.castle import CastleMario
 from dino_runner.components.cloud import CloudMario
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.princess import PrincessMario
-#from dino_runner.components.mario import Mario
 from dino_runner.components.super_mario import SuperMario
 from pygame import Surface
 
@@ -22,7 +21,6 @@ class Game:
         self.game_speed = 16
         self.x_pos_bg = 0
         self.y_pos_bg = 442
-        #self.player = Mario()
         self.cloud = CloudMario()
         self.player = SuperMario()
         self.castle = CastleMario()
