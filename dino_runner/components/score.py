@@ -2,7 +2,7 @@ import pygame
 from pygame.sprite import Sprite
 
 FONT_SCORE = "freesansbold.ttf"
-COLOR = (0, 0, 0)
+COLOR = (189, 189, 189)
 
 class Score(Sprite):
     def __init__(self):
@@ -18,5 +18,5 @@ class Score(Sprite):
         font = pygame.font.Font(FONT_SCORE, 22)
         text = font.render(f"SCORE: {self.score}", True, COLOR)
         text_rect = text.get_rect()
-        text_rect.center = (1000, 50)
+        text_rect.center = (500, 30)
         screen.blit(text, text_rect)
