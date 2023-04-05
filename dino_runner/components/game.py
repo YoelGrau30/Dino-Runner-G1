@@ -103,7 +103,7 @@ class Game:
     def show_menu(self):
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
-        self.screen.fill((243, 156, 18))
+        self.screen.fill((255, 152, 0 )) # (52, 73, 94)
         if self.death_count:
             pass
         else:
