@@ -3,8 +3,11 @@ from asyncio import shield
 import random
 
 import pygame
+from dino_runner.components.power_ups.gigant import Gigant
 from dino_runner.components.power_ups.power_ups import PowerUp
 from dino_runner.components.power_ups.shield import Shield
+from dino_runner.components.power_ups.surprise import Surprise
+from dino_runner.components.power_ups.yoshi import Yoshi
 
 
 class PowerUpManager:
@@ -18,7 +21,13 @@ class PowerUpManager:
         if not self.power_ups and score == self.when_appears:
             self.when_appears += random.randint(300, 400)
             #print("generate power up")
-            self.power_ups.append(Shield())
+            POWER_TYPES = [
+                Shield(),
+                Gigant(),
+                Yoshi(),
+                Surprise(),
+            ]
+            self.power_ups.append(random.choice(POWER_TYPES))
 
 
     def update(self, game_speed, score, player):
@@ -35,7 +44,7 @@ class PowerUpManager:
 
 
     def draw(self, screen):
-        print("power up")
+        #print("power up")
         for power_up in self.power_ups:
             power_up.draw(screen)
 
