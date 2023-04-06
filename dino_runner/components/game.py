@@ -11,7 +11,7 @@ from dino_runner.components.score import Score
 from dino_runner.components.super_mario import SuperMario
 from pygame import Surface
 
-from dino_runner.utils.constants_mario import BG, ICON, MARIO_ANGEL, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
+from dino_runner.utils.constants_mario import BG, ICON, MARIO_ANGEL, SCREEN_HEIGHT, SCREEN_WIDTH, SHIELD_TYPE, TITLE, FPS
 from dino_runner.utils.constants_other_mario import EXIT, GAME_OVER, MARIO_DEAD, PLAY, RAY_BLUE, RAY_PINK, SUPER_MARIO
 
 FONT_STYLE = "freesansbold.ttf"
@@ -83,7 +83,7 @@ class Game:
         self.player.update(user_input)
         self.princess.update()
         self.obstacle_manager.update(self.game_speed, self.player, self.on_death)
-        self.power_up_manager(self.game_speed, self.score_mario.score, self.player)
+        self.power_up_manager.update(self.game_speed, self.score_mario.score, self.player)
 
 
     def draw(self):
@@ -96,7 +96,7 @@ class Game:
         self.bander_bowser.draw(self.screen)
         self.player.draw(self.screen)
         self.princess.draw(self.screen)
-        self.player.draw_power_up.draw(self.screen)
+        self.player.draw_power_up(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.power_up_manager.draw(self.screen)
         self.right_castle.draw(self.screen)
@@ -153,11 +153,13 @@ class Game:
 
 
     def on_death(self):
-        self.player.dead()
-        self.draw()
-        self.playing = False
-        self.death_count += 1
-        pygame.time.delay(2000)
+        player_invincible = self.player.type == SHIELD_TYPE
+        if not player_invincible:
+           self.player.dead()
+           self.draw()
+           self.playing = False
+           self.death_count += 1
+           pygame.time.delay(2000)
 
     def menu_events(self):
         for event in pygame.event.get():
