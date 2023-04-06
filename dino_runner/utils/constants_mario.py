@@ -14,8 +14,9 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Mario_Other/Base.png'))
 ICON = pygame.image.load(os.path.join(IMG_DIR, "LogoMario.png"))
 
 DEFAULT_TYPE = "default"
-
-INICIAL_GAME_SPEED = 20
+SHIELD_TYPE = "shield"
+GIGANT_TYPE = "gigant"
+YOSHI_TYPE = "yoshi"
 
 #-------------------------------------------------------------------------------------------------------
 # ESTRUCTURA DE IMAGENES PARA CUANDO CORRE
