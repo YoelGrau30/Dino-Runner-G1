@@ -5,6 +5,7 @@ from dino_runner.components.castle_left import CastleLeft
 from dino_runner.components.castle_rigth import CastleRight
 from dino_runner.components.cloud import CloudMario
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
+from dino_runner.components.power_ups.power_ups_manager import PowerUpManager
 from dino_runner.components.princess import PrincessMario
 from dino_runner.components.score import Score
 from dino_runner.components.super_mario import SuperMario
@@ -38,6 +39,7 @@ class Game:
         self.bander_bowser = BanderBowser()
         self.princess = PrincessMario()
         self.obstacle_manager = ObstacleManager()
+        self.power_up_manager = PowerUpManager()
         self.score_mario = Score()
         self.death_count = 0
         self.best_score = 0
@@ -63,6 +65,7 @@ class Game:
 
     def reset(self):
         self.obstacle_manager.reset()
+        self.power_up_manager.reset()
         self.score_mario.reset()
         self.game_speed = 20
 
@@ -80,6 +83,7 @@ class Game:
         self.player.update(user_input)
         self.princess.update()
         self.obstacle_manager.update(self.game_speed, self.player, self.on_death)
+        self.power_up_manager(self.game_speed, self.score_mario.score, self.player)
 
 
     def draw(self):
@@ -92,7 +96,9 @@ class Game:
         self.bander_bowser.draw(self.screen)
         self.player.draw(self.screen)
         self.princess.draw(self.screen)
+        self.player.draw_power_up.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
+        self.power_up_manager.draw(self.screen)
         self.right_castle.draw(self.screen)
         self.score_mario.draw(self.screen)
         pygame.display.update()
@@ -159,3 +165,5 @@ class Game:
                 self.playing = False
             elif event.type == pygame.KEYDOWN:
                 self.play()
+
+
