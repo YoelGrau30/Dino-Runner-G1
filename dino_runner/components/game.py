@@ -52,11 +52,17 @@ class Game:
 
     def play(self):
         self.playing = True
-        self.obstacle_manager.reset()
+        self.reset()
+
         while self.playing:
             self.events()
             self.update()
             self.draw()
+
+    def reset(self):
+        self.obstacle_manager.reset()
+        self.score_mario.reset()
+        self.game_speed = 20
 
 
     def events(self):

@@ -23,3 +23,6 @@ class Score(Sprite):
         text_rect.center = (512, 40)
         screen.blit(text, text_rect)
         screen.blit(LOGO_POINTS,(395, 15))
+
+    def reset(self):
+        self.score = 0
