@@ -14,8 +14,10 @@ class PowerUpManager:
 
 
     def generate_power_ups(self, score ):
+        #print(f"weappers: {self.when_appears},   score:{score} ")
         if not self.power_ups and score == self.when_appears:
             self.when_appears += random.randint(300, 400)
+            #print("generate power up")
             self.power_ups.append(Shield())
 
 
@@ -29,9 +31,11 @@ class PowerUpManager:
                 player.on_pick_power_up(power_up)
                 self.power_ups.remove(power_up)
                 break
+            
 
 
     def draw(self, screen):
+        print("power up")
         for power_up in self.power_ups:
             power_up.draw(screen)
 
