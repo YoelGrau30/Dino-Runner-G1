@@ -147,9 +147,11 @@ class Game:
 
 
     def on_death(self):
-        pygame.time.delay(2000)
+        self.player.dead()
+        self.draw()
         self.playing = False
         self.death_count += 1
+        pygame.time.delay(2000)
 
     def menu_events(self):
         for event in pygame.event.get():

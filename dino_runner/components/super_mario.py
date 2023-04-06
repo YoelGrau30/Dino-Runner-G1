@@ -1,7 +1,7 @@
 from pygame import Surface
 import pygame
 from pygame.sprite import Sprite
-from dino_runner.utils.constants_mario import DRIVING, DRIVING_GIGANT, DRIVING_SHIELD, JUMPING, RUNNING
+from dino_runner.utils.constants_mario import DRIVING, DRIVING_GIGANT, DRIVING_SHIELD, JUMPING, MARIO_ANGEL, RUNNING
 
 
 MARIO_JUMPING = "JUMPING"
@@ -69,6 +69,8 @@ class SuperMario(Sprite):
         self.step += 1
         self.action = MARIO_DRIVING
 
+    def dead(self):
+        self.image = MARIO_ANGEL
 
     def draw(self, screen: Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))
