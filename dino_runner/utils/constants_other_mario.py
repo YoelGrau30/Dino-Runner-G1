@@ -86,8 +86,8 @@ DEREC = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Ot
 
 ########################################################################################################################################
 
-EXIT_WIDTH = 60
-EXIT_HEIGHT = 60
+EXIT_WIDTH = 80
+EXIT_HEIGHT = 80
 
 EXIT = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Exit.png")), (EXIT_WIDTH, EXIT_HEIGHT))
 
@@ -100,8 +100,8 @@ EXPLOTION = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mari
 
 ########################################################################################################################################
 
-OVER_WIDTH = 60
-OVER_HEIGHT = 60
+OVER_WIDTH = 700
+OVER_HEIGHT = 400
 
 GAME_OVER = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/GameOver.png")), (OVER_WIDTH, OVER_HEIGHT))
 
@@ -143,7 +143,7 @@ LOGO_POINTS = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Ma
 ########################################################################################################################################
 
 MARIO_DEAD_WIDTH = 300
-MARIO_DEAD_HEIGHT = 64
+MARIO_DEAD_HEIGHT = 90
 
 MARIO_DEAD = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/MarioDead.png")), (MARIO_DEAD_WIDTH, MARIO_DEAD_HEIGHT))
 
@@ -189,4 +189,30 @@ YUSHI_HEIGHT = 50
 YUSHI = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Yushi.png")), (YUSHI_WIDTH, YUSHI_HEIGHT))
 
 ########################################################################################################################################
+
+RAY_PINK_WIDTH = 600
+RAY_PINK_HEIGHT = 300
+
+RAY_PINK = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/RayPink.png")), (RAY_PINK_WIDTH , RAY_PINK_HEIGHT))
+
+########################################################################################################################################
+
+RAY_BlUE_WIDTH = 1000
+RAY_BLUE_HEIGHT = 600
+
+RAY_BLUE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/RayBlue.png")), (RAY_BlUE_WIDTH , RAY_BLUE_HEIGHT))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

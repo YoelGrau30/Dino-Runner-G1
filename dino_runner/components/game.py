@@ -11,10 +11,11 @@ from dino_runner.components.super_mario import SuperMario
 from pygame import Surface
 
 from dino_runner.utils.constants_mario import BG, ICON, MARIO_ANGEL, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
-from dino_runner.utils.constants_other_mario import PLAY, SUPER_MARIO
+from dino_runner.utils.constants_other_mario import EXIT, GAME_OVER, MARIO_DEAD, PLAY, RAY_BLUE, RAY_PINK, SUPER_MARIO
 
 FONT_STYLE = "freesansbold.ttf"
 BLACK_COLOR = (0,0,0)
+COLOR = (33, 47, 60)
 
 class Game:
 
@@ -39,6 +40,7 @@ class Game:
         self.obstacle_manager = ObstacleManager()
         self.score_mario = Score()
         self.death_count = 0
+        self.best_score = 0
         
 
     def run(self):
@@ -108,11 +110,30 @@ class Game:
 
     def show_menu(self):
         half_screen_height = SCREEN_HEIGHT // 2
-        half_screen_width = SCREEN_WIDTH // 2
-        self.screen.fill((255, 152, 0 )) # (52, 73, 94)
+        half_screen_width = SCREEN_WIDTH // 2  # (52, 73, 94)
         if self.death_count:
-            pass
+            self.screen.fill((0, 0, 255))
+            self.screen.blit(RAY_BLUE,(half_screen_width - 460, half_screen_height - 300))
+            self.screen.blit(RAY_PINK,(-10, -62))
+            font = pygame.font.Font(FONT_STYLE, 27)
+            text = font.render(f"DEAD COUNT: {self.death_count}", True, BLACK_COLOR)
+            text_rect = text.get_rect()
+            text_rect.center = (half_screen_width + 86, half_screen_height + 250)
+            self.screen.blit(text, text_rect)
+
+            font = pygame.font.Font(FONT_STYLE, 27)
+            text = font.render(f"SCORE: {self.score_mario.score}", True, BLACK_COLOR)
+            text_rect = text.get_rect()
+            text_rect.center = (half_screen_width + 86, half_screen_height + 200)
+            self.screen.blit(text, text_rect)
+
+            self.screen.blit(MARIO_DEAD,(740, half_screen_height - 240))
+            self.screen.blit(EXIT,(800, 350))
+            self.screen.blit(PLAY,(800, 200))
+            self.screen.blit(GAME_OVER,(half_screen_width - 480, half_screen_height - 200))
+            
         else:
+            self.screen.fill((255, 152, 0 ))
             font = pygame.font.Font(FONT_STYLE, 27)
             text = font.render("ENTER SPACE = PLAY", True, BLACK_COLOR)
             text_rect = text.get_rect()
@@ -129,7 +150,6 @@ class Game:
         pygame.time.delay(2000)
         self.playing = False
         self.death_count += 1
-
 
     def menu_events(self):
         for event in pygame.event.get():
