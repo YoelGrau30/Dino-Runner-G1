@@ -17,6 +17,7 @@ DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
 GIGANT_TYPE = "gigant"
 YOSHI_TYPE = "yoshi"
+SURPRISE_TYPE = "surprise"
 
 #-------------------------------------------------------------------------------------------------------
 # ESTRUCTURA DE IMAGENES PARA CUANDO CORRE

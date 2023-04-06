@@ -165,7 +165,7 @@ PLAY = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Oth
 
 SHIELD_WIDTH = 50
 SHIELD_HEIGHT = 50
-SHIELD = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Shield.png")), (SHIELD_WIDTH, SHIELD_HEIGHT))
+SHIELD_MARIO = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Shield.png")), (SHIELD_WIDTH, SHIELD_HEIGHT))
 
 ########################################################################################################################################
 
@@ -186,7 +186,7 @@ SURPRISE = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario
 YUSHI_WIDTH = 50
 YUSHI_HEIGHT = 50
 
-YUSHI = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Yushi.png")), (YUSHI_WIDTH, YUSHI_HEIGHT))
+YOSHI = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario_Other/Yushi.png")), (YUSHI_WIDTH, YUSHI_HEIGHT))
 
 ########################################################################################################################################
 

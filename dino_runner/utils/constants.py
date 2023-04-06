@@ -64,8 +64,8 @@ BIRD = [
 ]
 
 DINO_CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
-SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
-HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
+SHIELD_DINO = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
+HAMMER_DINO = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
 DINO_BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
