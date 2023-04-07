@@ -4,7 +4,7 @@ import pygame
 from dino_runner.utils.constants_mario import SCREEN_HEIGHT, SCREEN_WIDTH
 
 
-FONT_COLOR = (189, 189, 189)
+FONT_COLOR = (0, 0, 0)
 FONT_SIZE = 30
 FONT_STYLE = "freesansbold.ttf"
 

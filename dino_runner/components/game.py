@@ -117,7 +117,7 @@ class Game:
 
     def show_menu(self):
         half_screen_height = SCREEN_HEIGHT // 2
-        half_screen_width = SCREEN_WIDTH // 2  # (52, 73, 94)
+        half_screen_width = SCREEN_WIDTH // 2  
         if self.death_count:
             self.screen.fill((0, 0, 255))
             self.screen.blit(RAY_BLUE,(half_screen_width - 460, half_screen_height - 300))
