@@ -4,6 +4,7 @@ import random
 
 import pygame
 from dino_runner.components.power_ups.gigant import Gigant
+from dino_runner.components.power_ups.heart import Heart
 from dino_runner.components.power_ups.power_ups import PowerUp
 from dino_runner.components.power_ups.shield import Shield
 from dino_runner.components.power_ups.surprise import Surprise
@@ -23,9 +24,11 @@ class PowerUpManager:
             #print("generate power up")
             POWER_TYPES = [
                 Shield(),
-                Gigant(),
+                #Gigant(),
                 Yoshi(),
-                Surprise(),
+                #Surprise(),
+                #Heart(),
+                
             ]
             self.power_ups.append(random.choice(POWER_TYPES))
 

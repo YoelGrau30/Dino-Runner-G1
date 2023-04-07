@@ -2,7 +2,7 @@ import random
 from pygame import Surface
 import pygame
 from pygame.sprite import Sprite
-from dino_runner.utils.constants import DEFAULT_TYPE, JUMPING_SHIELD, RUNNING_SHIELD, JUMPING_SHIELD, RUNNING_SHIELD
+from dino_runner.utils.constants import DEFAULT_TYPE, JUMPING_SHIELD, RUNNING_SHIELD, JUMPING_SHIELD, RUNNING_SHIELD, SHIELD_DINO
 from dino_runner.utils.constants_mario import DRIVING, DRIVING_SHIELD, DRIVING_YOSHI,  JUMPING_YOSHI, JUMPING, JUMPING_YOSHI, MARIO_ANGEL, RUNNING, RUNNING_YOSHI, RUNNING, RUNNING_YOSHI, SHIELD_TYPE, YOSHI_TYPE
 from dino_runner.utils.message import draw_message
 
@@ -10,6 +10,7 @@ from dino_runner.utils.message import draw_message
 MARIO_IMG_JUMPING = "IMG_JUMPING"
 MARIO_IMG_RUNNING = "IMG_RUNNING"
 MARIO_IMG_DRIVING = "IMG_DRIVING"
+#IMG_RUNNING = {DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD, YOSHI_TYPE: RUNNING_YOSHI }
 IMG_RUNNING = {DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD, YOSHI_TYPE: RUNNING_YOSHI }
 IMG_DRIVING = {DEFAULT_TYPE: DRIVING, SHIELD_TYPE: DRIVING_SHIELD, YOSHI_TYPE: DRIVING_YOSHI }
 IMG_JUMPING = {DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD, YOSHI_TYPE: JUMPING_YOSHI }
@@ -25,7 +26,7 @@ class SuperMario(Sprite):
 
     def __init__(self):
         self.type = DEFAULT_TYPE
-        
+        #self.image = JUMPING[]
         self.image = IMG_RUNNING[self.type][0]
         self.rect = self.image.get_rect()
         self.position()

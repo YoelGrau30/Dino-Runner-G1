@@ -1,3 +1,4 @@
+import random
 import pygame
 from dino_runner.components.bander_bowser import BanderBowser
 from dino_runner.components.black import Black
@@ -8,10 +9,10 @@ from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_ups_manager import PowerUpManager
 from dino_runner.components.princess import PrincessMario
 from dino_runner.components.score import Score
-from dino_runner.components.super_mario import SuperMario
+from dino_runner.components.super_mario import IMG_SURPRISE, SuperMario
 from pygame import Surface
 
-from dino_runner.utils.constants_mario import BG, ICON, MARIO_ANGEL, SCREEN_HEIGHT, SCREEN_WIDTH, SHIELD_TYPE, TITLE, FPS
+from dino_runner.utils.constants_mario import BG, GIGANT_TYPE, ICON, MARIO_ANGEL, SCREEN_HEIGHT, SCREEN_WIDTH, SHIELD_TYPE, SURPRISE_TYPE, TITLE, FPS
 from dino_runner.utils.constants_other_mario import EXIT, GAME_OVER, MARIO_DEAD, PLAY, RAY_BLUE, RAY_PINK, SUPER_MARIO
 
 FONT_STYLE = "freesansbold.ttf"
@@ -153,13 +154,22 @@ class Game:
 
 
     def on_death(self):
-        player_invincible = self.player.type == SHIELD_TYPE
+        player_invincible = self.player.type == SHIELD_TYPE 
         if not player_invincible:
            self.player.dead()
            self.draw()
            self.playing = False
            self.death_count += 1
            pygame.time.delay(2000)
+           if self.player.type == SURPRISE_TYPE:
+            self.player.type = random.choice(IMG_SURPRISE)
+            
+           elif self.player.type == GIGANT_TYPE:
+            for obstacle in self.obstacle:
+                if self.player.rect.colliderect(obstacle.rect):
+                    self.obstacles.remove(obstacle)
+
+            
 
     def menu_events(self):
         for event in pygame.event.get():

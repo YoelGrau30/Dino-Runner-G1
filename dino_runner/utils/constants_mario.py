@@ -17,6 +17,7 @@ DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
 GIGANT_TYPE = "gigant"
 YOSHI_TYPE = "yoshi"
+HEART_TYPE = "heart"
 SURPRISE_TYPE = "surprise"
 
 #-------------------------------------------------------------------------------------------------------
